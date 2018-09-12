@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.HistoryCustom">
+
+
+    <select id="selectCidHistoryByid"  parameterType="model.History" resultType="Integer">
+        select cid from manhua.history  where uid =#{uid} and mid = #{mid}
+    </select>
+
+
+    <select id="selectIdHistoryByid"  parameterType="model.History" resultType="model.History">
+        select * from manhua.history  where uid =#{uid} and mid = #{mid}
+    </select>
+
+</mapper>
